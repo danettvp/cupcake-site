@@ -1,0 +1,285 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff8f6;
+    font-size: 20px;
+}
+
+/* Header (Mobile First) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.logo {
+    height: 50px;
+}
+
+.hamburger {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Nav (Mobile First) */
+#primary-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#primary-nav.active {
+    display: flex;
+}
+
+#primary-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#primary-nav ul li {
+    margin: 1rem 0;
+}
+
+#primary-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+#primary-nav ul li a:hover {
+    color: pink;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('../assets/hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    height: 80vh;
+}
+
+#hero img {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-top: 20px;
+}
+
+.cta {
+    display: inline-block;
+    background-color: pink;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta:hover {
+    background-color: #e9bd5e;
+}
+
+/* Cupcake List */
+#cupcake-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#cupcake-list .cta {
+    display: block;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+}
+
+.new-card {
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.new-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.new-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.new-card ul li:first-child {
+    margin-bottom: 0.5rem; 
+}
+
+.new-card ul li:last-child {
+    font-weight: bold;
+    color: #333; 
+}
+
+
+/* Footer */
+footer {
+    background: #ffe4e1;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+h6 {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Cupcake */
+#cupcake-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+#cupcake-detail img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.info {
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    #hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center; 
+        gap: 2rem;
+    }
+
+    #hero h1{
+        font-size: 70px;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    #hero img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px; 
+    }
+
+    #primary-nav {
+        position: static;
+        display: flex;
+        justify-content: center;
+        width: auto;
+    }
+
+    #primary-nav ul {
+        display: flex;
+    }
+
+    #primary-nav ul li {
+        margin: 0 1.5rem;
+    }
+
+
+    #hero {
+        padding: 4rem 2rem;
+    }
+
+    #cupcake-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #cupcake-detail {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    #cupcake-detail img {
+        width: 50%;
+        max-width: none;
+    }
+
+    .info {
+        text-align: left;
+        width: 40%;
+    }
+}
